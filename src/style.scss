@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+$text-color : #e1e6e2;
+$black-primary : #16181b;
+$black-secondary : #121417 ;
+$border-color:rgba(255, 255, 255, 0.1);
+$breakpoint-medium : 1224px ;
+$breakpoint-small : 520px ;
+
+
+// we have defined somecolor which we need in our app and also some breakpoint 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:$black-primary;
+    background-attachment: fixed;
+    color: $text-color;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1px;
+}
+@mixin line-Clamp ($number){
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+}
+::-webkit-scrollbar{
+    width: 0;
+}

@@ -1,0 +1,23 @@
+@import '../../style.scss';
+.login{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    &__container{
+        background: $black-secondary;
+        border-radius: 10px;
+        padding: 2rem;
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    button{
+        width: auto;
+        height: 3rem;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
+

@@ -1,0 +1,106 @@
+@import '../../style.scss';
+
+.Header{
+    display: flex;
+    // gap: 8rem;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: $black-primary;
+    height: 10vh;
+    width: 100%;
+    // we can do this because of bem and sass
+    &__menu{
+        display: none;
+    }
+    &__logo{
+        width: 6.5rem;
+        height: 30px;
+        object-fit: contain;
+        display: block;
+        
+        
+    }
+    &__form{
+        display: flex;
+        // flex:0.9;
+        width: 60%;
+        margin-left: 4rem;
+    }
+    form{
+        // flex: 0.5;
+    display: flex;
+    align-self: center;
+    margin: 0 1rem ;
+    padding-left: 0.5rem;
+    border-radius: 100px;
+    border: 1.2px solid $border-color;
+    background-color: $black-secondary;
+    width: 70%;
+  
+
+    input{
+        width: 100%;
+        border: none;
+        font-weight: 500;
+        background: transparent;
+        padding: 0.3rem;
+        color: $text-color;
+        &:focus{
+            outline: none;
+        }
+
+        }
+    button{
+        background:$border-color;
+        border: none;
+        // margin: 0 0.8rem;
+        color: $text-color;
+        border-radius: 0px 30px 30px 0px;
+        padding-left:1rem;
+        padding-right: 1rem;
+        border-left: 1px solid $border-color;
+    }    
+
+    }
+    .mic{
+        background-color: $black-primary;
+        color: $border-color;
+       
+    }
+    &__icons{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        gap: 8px;
+        img{
+            width: 40px;
+        }
+    }
+
+}
+@media(max-width:$breakpoint-small){
+    .Header {
+        padding: 1rem;
+        &__form{
+            flex: 1.2;
+            margin: 0;
+        }
+        &__menu{
+            display: block;
+            margin-left:0.8rem;
+            font-size: 26px;
+        }
+        &__logo{
+            display: none;
+        }
+        &__icons>*:not(img){  //this means inside icons select all execpt img
+            display: none;
+        }
+        img{
+            // margin-right:2rem;
+            margin:0 1.2rem 0 1rem;
+        }
+    }
+}
